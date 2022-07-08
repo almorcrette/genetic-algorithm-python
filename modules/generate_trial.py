@@ -1,3 +1,5 @@
+import random
+
 def generate_trial(size, food_proportion):
     return [
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -11,3 +13,6 @@ def generate_trial(size, food_proportion):
         [0, 0, 0, 0, 0, 0, 0, 0, 1, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
     ]
+    # trial[random.uniform(0, 10)][random.uniform(0, 10)] = 1
+    # return trial
+    
