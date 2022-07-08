@@ -1,7 +1,7 @@
 from random import uniform
 from math import floor
-from functools import reduce
 import numpy as np
+
 
 def generate_trial(size, food_proportion):
     __guard_invalid_food_proportion(food_proportion)
@@ -9,9 +9,11 @@ def generate_trial(size, food_proportion):
     trial = __populate_food(trial, food_proportion)
     return trial
 
+
 def __guard_invalid_food_proportion(food_proportion):
     if food_proportion > 1 or food_proportion < 0:
-        raise Exception('food_proportion must be between 0 and 1') 
+        raise Exception('food_proportion must be between 0 and 1')
+
 
 def __populate_food(trial, food_proportion):
     size = len(trial)
@@ -22,6 +24,7 @@ def __populate_food(trial, food_proportion):
         trial[y][x] = 1
     return trial
 
+
 def __select_random_cell(size):
     x = __select_random_index(size)
     y = __select_random_index(size)
@@ -30,4 +33,3 @@ def __select_random_cell(size):
 
 def __select_random_index(size):
     return floor(uniform(0, size))
-    
