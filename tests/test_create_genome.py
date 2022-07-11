@@ -8,3 +8,47 @@ def test_create_genome_return_list_w_num_els_equal_to_features_to_power_of_space
     features = 3
     genome = create_genome(spaces, features)
     assert len(genome) == features ** spaces
+
+    spaces = 5
+    features = 5
+    genome = create_genome(spaces, features)
+    assert len(genome) == features ** spaces
+
+    spaces = 10
+    features = 3
+    genome = create_genome(spaces, features)
+    assert len(genome) == features ** spaces
+
+    spaces = 0
+    features = 0
+    genome = create_genome(spaces, features)
+    assert len(genome) == features ** spaces
+   
+
+def test_create_genome_return_list_of_unique_elements():
+    spaces = 5
+    features = 3
+    genome = create_genome(spaces, features)
+    for x in genome:
+        genome.remove(x)
+        for y in genome:
+            assert x != y
+        genome.append(x)
+
+    spaces = 5
+    features = 2
+    genome = create_genome(spaces, features)
+    for x in genome:
+        genome.remove(x)
+        for y in genome:
+            assert x != y
+        genome.append(x)
+
+    spaces = 3
+    features = 3
+    genome = create_genome(spaces, features)
+    for x in genome:
+        genome.remove(x)
+        for y in genome:
+            assert x != y
+        genome.append(x)
