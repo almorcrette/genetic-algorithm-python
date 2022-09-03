@@ -40,3 +40,5 @@ def test_create_world_returns_list_length_num_trials():
         generator_arg_food_proportion
         )
     assert len(world) == num_trials
+
+# Missing tests for trial_generator and generator_args
