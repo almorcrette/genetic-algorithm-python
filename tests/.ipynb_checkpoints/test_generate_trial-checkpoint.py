@@ -5,7 +5,7 @@ import path_helper
 from generate_trial import generate_trial
 
 
-def test_generate_trial_returns_has_height_equal_to_size():
+def test_generate_trial_return_has_width_and_height_equal_to_size():
     size = 10
     food_proportion = 0
     trial = generate_trial(size, food_proportion)
@@ -15,20 +15,6 @@ def test_generate_trial_returns_has_height_equal_to_size():
     food_proportion = 0
     trial = generate_trial(size, food_proportion)
     assert len(trial) == size
-
-
-def test_generate_trial_returns_has_width_equal_to_size():
-    size = 10
-    food_proportion = 0
-    trial = generate_trial(size, food_proportion)
-    for x in trial:
-        len(x) == size
-
-    size = 20
-    food_proportion = 0
-    trial = generate_trial(size, food_proportion)
-    for x in trial:
-        len(x) == size
 
 
 def test_generate_trial_returns_cells_only_0s_and_1s():
