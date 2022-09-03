@@ -10,3 +10,4 @@ def create_genome(spaces, features):
         s = ''.join(num)
         genome.append(s)
     return genome
+

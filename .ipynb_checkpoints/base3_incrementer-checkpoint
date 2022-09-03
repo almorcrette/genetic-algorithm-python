@@ -1,0 +1,7 @@
+import itertools
+digits = '012'
+genome = []
+for num in itertools.product(digits, repeat=5):
+    s = ''.join(num)
+    genome.append(int(s, 6))
+    print(len(genome))

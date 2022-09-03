@@ -60,3 +60,5 @@ def test_create_genome_return_list_of_elements_each_a_string_of_spaces_number_of
     genome = create_genome(spaces, features)
     for x in genome:
         assert len(x) == spaces
+
+# Final test which checks that every char is one of the digits in the range of features
